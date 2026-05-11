@@ -32,7 +32,7 @@ setLoading(true);
       );
 
       await axios.post(
-        "http://localhost:5000/api/posts",
+        "https://blog-platform-backend-wc9b.onrender.com/api/posts",
         {
           ...formData,
           author: user.name,

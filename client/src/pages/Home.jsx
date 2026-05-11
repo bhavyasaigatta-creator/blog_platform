@@ -28,7 +28,7 @@ function Home() {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/posts"
+        "https://blog-platform-backend-wc9b.onrender.com/api/posts"
       );
 
       setPosts(res.data);
@@ -49,7 +49,7 @@ localStorage.setItem(
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/posts/${id}`
+        `https://blog-platform-backend-wc9b.onrender.com/api/posts/${id}`
       );
 
       fetchPosts();
@@ -78,7 +78,7 @@ localStorage.setItem(
     try {
 
       await axios.put(
-        `http://localhost:5000/api/posts/${id}`,
+        `https://blog-platform-backend-wc9b.onrender.com/api/posts/${id}`,
         updatedData
       );
 
@@ -103,7 +103,7 @@ localStorage.setItem(
       );
 
       await axios.post(
-        `http://localhost:5000/api/posts/${postId}/comment`,
+        `https://blog-platform-backend-wc9b.onrender.com/api/posts/${postId}/comment`,
         {
           user: user.name,
           text: commentText[postId]
@@ -129,7 +129,7 @@ const likePost = async (id) => {
   try {
 
     await axios.put(
-      `http://localhost:5000/api/posts/${id}/like`
+      `https://blog-platform-backend-wc9b.onrender.com/api/posts/${id}/like`
     );
 
     fetchPosts();

@@ -29,7 +29,7 @@ setLoading(true);
     try {
 
       const res = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://blog-platform-backend-wc9b.onrender.com/api/auth/register",
         formData
       );
 
